@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - QR Attendance System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance - Admin
+            </div>
+
+            <div class="nav-links">
+
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="admin-subjects.html">
+                    Manage Subjects
+                </a>
+
+                <a href="#" onclick="logoutAdmin()">
+                    Logout
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Admin Dashboard -->
+
+    <main>
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-container">
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+                <p>
+                    Welcome, <strong id="adminName">Admin</strong>
+                </p>
+
+
+                <!-- Admin Information -->
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Admin Information
+                    </h2>
+
+                    <p>
+                        <strong>Name:</strong>
+                        <span id="adminNameInfo">Loading...</span>
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <span id="adminEmail">Loading...</span>
+                    </p>
+
+                    <p>
+                        <strong>Role:</strong>
+                        <span id="adminRole">Administrator</span>
+                    </p>
+
+                </div>
+
+
+                <!-- Admin Actions -->
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Administration
+                    </h2>
+
+
+                    <br>
+
+                    <a
+                        href="admin-subjects.html"
+                        class="btn"
+                    >
+                        Manage Subjects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>

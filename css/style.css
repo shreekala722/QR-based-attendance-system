@@ -1,0 +1,959 @@
+/* =========================================
+   GENERAL STYLES
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+header {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   COMMON BUTTON
+   ========================================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: #2563eb;
+    color: white;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-section {
+    min-height: calc(100vh - 140px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.login-description {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+
+/* =========================================
+   REGISTER PAGE
+   ========================================= */
+
+.register-section {
+    padding: 50px 20px;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.register-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FORM STYLES
+   ========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.login-btn,
+.register-btn,
+.generate-btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard-section {
+    padding: 40px 20px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.welcome-section {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-section h1 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    color: #666;
+}
+
+
+/* =========================================
+   PROFILE CARD
+   ========================================= */
+
+.student-info-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.student-info-card h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.student-info p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   DASHBOARD ACTIONS
+   ========================================= */
+
+.dashboard-actions {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.dashboard-card p {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   ATTENDANCE SUMMARY
+   ========================================= */
+
+.attendance-summary {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.attendance-summary h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.summary-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.summary-card {
+    background-color: #f4f7fb;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    border: 1px solid #e0e5ed;
+}
+
+.summary-card h3 {
+    font-size: 16px;
+
+    margin-bottom: 12px;
+
+    color: #555;
+}
+
+.summary-card p {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* =========================================
+   INSTRUCTIONS
+   ========================================= */
+
+.instructions {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.instructions h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.instructions ol {
+    padding-left: 25px;
+}
+
+.instructions li {
+    margin-bottom: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   GENERATE QR PAGE
+   ========================================= */
+
+.qr-section {
+    padding: 40px 20px;
+}
+
+.qr-container {
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.qr-container h1 {
+    text-align: center;
+
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+.qr-description {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* QR Display */
+
+.qr-display {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #f4f7fb;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+}
+
+.qr-display h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 20px;
+}
+
+#qrcode {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 220px;
+
+    margin-bottom: 15px;
+}
+
+#sessionInfo {
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+.qr-timer {
+    margin-top: 15px;
+}
+
+.qr-timer p {
+    margin-bottom: 5px;
+}
+
+#timer {
+    color: #dc2626;
+
+    font-size: 30px;
+}
+
+.stop-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    background-color: #dc2626;
+}
+
+.stop-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* =========================================
+   SCAN QR PAGE
+   ========================================= */
+
+.scan-section {
+    padding: 40px 20px;
+}
+
+.scan-container {
+    max-width: 650px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scan-container h1 {
+    text-align: center;
+
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+.scan-description {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* Scanner */
+
+.scanner-box {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.scanner-box h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 20px;
+}
+
+#reader {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+}
+
+
+/* Scan Result */
+
+.scan-result {
+    padding: 20px;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    background-color: #f4f7fb;
+
+    border-radius: 8px;
+
+    border: 1px solid #ddd;
+}
+
+.scan-result h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+#scanMessage {
+    color: #555;
+}
+
+
+/* Student Scan Information */
+
+.student-scan-info {
+    background-color: #f4f7fb;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    border-radius: 8px;
+}
+
+.student-scan-info h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 15px;
+}
+
+.student-scan-info p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   ATTENDANCE PAGE
+   ========================================= */
+
+.attendance-section {
+    padding: 40px 20px;
+}
+
+.attendance-container {
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.attendance-container > h1 {
+    text-align: center;
+
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+.attendance-description {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   ATTENDANCE FILTER
+   ========================================= */
+
+.attendance-filter {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.attendance-filter label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.attendance-filter select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    margin-bottom: 15px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ATTENDANCE TABLE
+   ========================================= */
+
+.attendance-table-container {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    overflow-x: auto;
+}
+
+.attendance-table-container h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 20px;
+}
+
+.attendance-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+}
+
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+.attendance-table th {
+    background-color: #1e3a8a;
+
+    color: white;
+}
+
+.attendance-table tr:nth-child(even) {
+    background-color: #f4f7fb;
+}
+
+
+/* =========================================
+   PERCENTAGE INFORMATION
+   ========================================= */
+
+.percentage-info {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.percentage-info h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 15px;
+}
+
+.percentage-info p {
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.register-link,
+.login-link,
+.back-link {
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.register-link a,
+.login-link a,
+.back-link a {
+    color: #2563eb;
+
+    text-decoration: none;
+}
+
+.register-link a:hover,
+.login-link a:hover,
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+#loginMessage,
+#registerMessage,
+#qrMessage {
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: #1e3a8a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-container,
+    .register-container,
+    .qr-container,
+    .scan-container {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-section,
+    .qr-section,
+    .scan-section,
+    .attendance-section {
+        padding: 25px 15px;
+    }
+
+}

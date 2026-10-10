@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Manage Subjects - QR Attendance System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- NAVIGATION BAR -->
+    <!-- ============================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+
+                <a href="teacher-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="manage-subjects.html">
+                    Manage Subjects
+                </a>
+
+                <a href="generate-qr.html">
+                    Generate QR
+                </a>
+
+                <a href="teacher-attendance.html">
+                    View Attendance
+                </a>
+
+                <a
+                    href="#"
+                    onclick="logoutUser()"
+                >
+                    Logout
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main>
+
+        <section class="attendance-section">
+
+            <div class="attendance-container">
+
+                <h1>
+                    Manage Subjects
+                </h1>
+
+                <p class="attendance-description">
+                    Create and view the subjects assigned to you.
+                </p>
+
+
+                <!-- ============================= -->
+                <!-- CREATE SUBJECT FORM -->
+                <!-- ============================= -->
+
+                <div class="student-info-card">
+
+                    <h2>
+                        Create New Subject
+                    </h2>
+
+                    <form
+                        id="subjectForm"
+                        onsubmit="createSubject(event)"
+                    >
+
+                        <!-- SUBJECT NAME -->
+
+                        <div class="form-group">
+
+                            <label for="subjectName">
+                                Subject Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subjectName"
+                                placeholder="Enter subject name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- SUBJECT CODE -->
+
+                        <div class="form-group">
+
+                            <label for="subjectCode">
+                                Subject Code
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subjectCode"
+                                placeholder="Enter subject code"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DEPARTMENT -->
+
+                        <div class="form-group">
+
+                            <label for="subjectDepartment">
+                                Department
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subjectDepartment"
+                                placeholder="Example: ISE"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- SEMESTER -->
+
+                        <div class="form-group">
+
+                            <label for="subjectSemester">
+                                Semester
+                            </label>
+
+                            <select
+                                id="subjectSemester"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Semester
+                                </option>
+
+                                <option value="1">
+                                    1
+                                </option>
+
+                                <option value="2">
+                                    2
+                                </option>
+
+                                <option value="3">
+                                    3
+                                </option>
+
+                                <option value="4">
+                                    4
+                                </option>
+
+                                <option value="5">
+                                    5
+                                </option>
+
+                                <option value="6">
+                                    6
+                                </option>
+
+                                <option value="7">
+                                    7
+                                </option>
+
+                                <option value="8">
+                                    8
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SECTION -->
+
+                        <div class="form-group">
+
+                            <label for="subjectSection">
+                                Section
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subjectSection"
+                                placeholder="Example: A"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="btn"
+                        >
+                            Create Subject
+                        </button>
+
+
+                        <!-- MESSAGE -->
+
+                        <p id="subjectMessage"></p>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ============================= -->
+                <!-- SUBJECT LIST -->
+                <!-- ============================= -->
+
+                <div class="attendance-table-container">
+
+                    <h2>
+                        My Subjects
+                    </h2>
+
+                    <table class="attendance-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Sl. No.
+                                </th>
+
+                                <th>
+                                    Subject Name
+                                </th>
+
+                                <th>
+                                    Subject Code
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Semester
+                                </th>
+
+                                <th>
+                                    Section
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="subjectTableBody">
+
+                            <tr>
+
+                                <td colspan="6">
+                                    Loading subjects...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- BACK LINK -->
+
+                <p class="back-link">
+
+                    <a href="teacher-dashboard.html">
+                        ← Back to Dashboard
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script src="js/manage-subjects.js"></script>
+
+</body>
+
+</html>

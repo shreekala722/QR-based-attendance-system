@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Subjects - Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance - Admin
+            </div>
+
+            <div class="nav-links">
+
+                <a href="admin-dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="admin-subjects.html">
+                    Manage Subjects
+                </a>
+
+                <a href="#" onclick="logoutAdmin()">
+                    Logout
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-container">
+
+                <h1>
+                    Manage Subjects
+                </h1>
+
+                <p>
+                    Assign or change the teacher for a subject.
+                </p>
+
+
+                <!-- Subject Selection -->
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Assign Teacher
+                    </h2>
+
+                    <div class="form-group">
+
+                        <label for="subjectSelect">
+                            Select Subject
+                        </label>
+
+                        <select id="subjectSelect">
+
+                            <option value="">
+                                Loading subjects...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="teacherSelect">
+                            Select Teacher
+                        </label>
+
+                        <select id="teacherSelect">
+
+                            <option value="">
+                                Loading teachers...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn"
+                        onclick="assignTeacher()"
+                    >
+                        Assign Teacher
+                    </button>
+
+
+                    <p id="assignMessage"></p>
+
+                </div>
+
+
+                <!-- Subjects List -->
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Subjects
+                    </h2>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Subject
+                                </th>
+
+                                <th>
+                                    Code
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Semester
+                                </th>
+
+                                <th>
+                                    Section
+                                </th>
+
+                                <th>
+                                    Teacher
+                                </th>
+
+                                <th>
+    Action
+</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="subjectsTableBody">
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Loading subjects...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <script src="js/admin-subjects.js"></script>
+
+</body>
+
+</html>

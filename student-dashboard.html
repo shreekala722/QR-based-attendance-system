@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard - QR Attendance System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+
+                <a href="student-dashboard.html">Dashboard</a>
+
+                <a href="scan-qr.html">Scan QR</a>
+
+                <a href="attendance.html">My Attendance</a>
+
+                <a href="#" onclick="logoutUser()">Logout</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Dashboard -->
+
+    <main>
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-container">
+
+                <!-- Welcome -->
+
+                <div class="welcome-section">
+
+                    <h1>
+                        Welcome, Student!
+                    </h1>
+
+                    <p>
+                        Manage your attendance easily using the QR Attendance System.
+                    </p>
+
+                </div>
+
+
+                <!-- Student Information -->
+
+                <div class="student-info-card">
+
+                    <h2>My Profile</h2>
+
+                    <div class="student-info">
+
+                        <p>
+                            <strong>Name:</strong>
+                            <span id="studentName">Student Name</span>
+                        </p>
+
+                        <p>
+                            <strong>USN:</strong>
+                            <span id="studentUSN">Student USN</span>
+                        </p>
+
+                        <p>
+                            <strong>Department:</strong>
+                            <span id="studentDepartment">Department</span>
+                        </p>
+
+                        <p>
+                            <strong>Semester:</strong>
+                            <span id="studentSemester">Semester</span>
+                        </p>
+
+                        <p>
+                            <strong>Section:</strong>
+                            <span id="studentSection">Section</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard Actions -->
+
+                <div class="dashboard-actions">
+
+                    <div class="dashboard-card">
+
+                        <h2>Scan QR Code</h2>
+
+                        <p>
+                            Scan the QR code displayed by your teacher
+                            to mark your attendance.
+                        </p>
+
+                        <a
+                            href="scan-qr.html"
+                            class="btn"
+                        >
+                            Scan QR
+                        </a>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h2>My Attendance</h2>
+
+                        <p>
+                            View your attendance records and
+                            attendance percentage.
+                        </p>
+
+                        <a
+                            href="attendance.html"
+                            class="btn"
+                        >
+                            View Attendance
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance Summary -->
+
+                <div class="attendance-summary">
+
+                    <h2>Attendance Summary</h2>
+
+                    <div class="summary-container">
+
+                        <div class="summary-card">
+
+                            <h3>Total Classes</h3>
+
+                            <p id="totalClasses">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <div class="summary-card">
+
+                            <h3>Classes Attended</h3>
+
+                            <p id="classesAttended">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <div class="summary-card">
+
+                            <h3>Attendance Percentage</h3>
+
+                            <p id="attendancePercentage">
+                                0%
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Instructions -->
+
+                <div class="instructions">
+
+                    <h2>How to Mark Attendance</h2>
+
+                    <ol>
+
+                        <li>
+                            Login to your student account.
+                        </li>
+
+                        <li>
+                            Go to the Scan QR page.
+                        </li>
+
+                        <li>
+                            Allow camera access when requested.
+                        </li>
+
+                        <li>
+                            Scan the QR code displayed by your teacher.
+                        </li>
+
+                        <li>
+                            Wait for the attendance confirmation.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/student.js"></script>
+
+</body>
+
+</html>
