@@ -129,7 +129,7 @@ async function loadSessionAttendance() {
         `;
 
         const sessionResponse = await fetch(
-            `http://localhost:5000/api/sessions/${sessionId}`
+            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/${sessionId}`
         );
 
         const sessionData =

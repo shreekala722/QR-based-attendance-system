@@ -52,7 +52,7 @@ async function loadTeachers() {
     try {
 
         const response = await fetch(
-    "http://localhost:5000/api/admin/teachers",
+    "http://qr-based-attendance-system-1-qi8b.onrender.com/api/admin/teachers",
     {
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`
@@ -280,7 +280,7 @@ async function assignTeacher() {
 
         const response = await fetch(
 
-            `http://localhost:5000/api/admin/subjects/${subjectId}/assign-teacher`,
+            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/admin/subjects/${subjectId}/assign-teacher`,
 
             {
 
@@ -361,7 +361,7 @@ async function deleteSubject(subjectId, subjectName) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/admin/subjects/${subjectId}`,
+            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/admin/subjects/${subjectId}`,
             {
                 method: "DELETE"
             }

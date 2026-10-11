@@ -18,7 +18,7 @@ async function loadSubjects() {
 
     try {
         const response = await fetch(
-            `http://localhost:5000/api/teachers/${teacherId}/subjects`
+            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/subjects`
         );
 
         const data = await response.json();

@@ -30,7 +30,7 @@ async function loadAttendancePage() {
         // =========================================
 
         const studentResponse = await fetch(
-            `http://localhost:5000/api/students/${studentId}`
+            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}`
         );
 
         const studentData = await studentResponse.json();
@@ -92,7 +92,7 @@ async function loadAttendancePage() {
         // =========================================
 
         const attendanceResponse = await fetch(
-            `http://localhost:5000/api/students/${studentId}/attendance`
+            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance`
         );
 
         const attendanceData = await attendanceResponse.json();

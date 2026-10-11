@@ -399,7 +399,7 @@ async function generateQR() {
 
 
         const response = await fetch(
-            "http://localhost:5000/api/sessions/create",
+            "http://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/create",
             {
                 method: "POST",
 
