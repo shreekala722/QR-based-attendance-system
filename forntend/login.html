@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - QR Attendance System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="register.html">Register</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Login Section -->
+
+    <main>
+
+        <section class="login-section">
+
+            <div class="login-container">
+
+                <h1>Login</h1>
+
+                <p class="login-description">
+                    Login to access the QR Attendance System
+                </p>
+
+
+                <!-- User Type -->
+
+                <div class="form-group">
+
+                    <label for="userType">
+                        Login As
+                    </label>
+
+                    <select id="userType" name="userType">
+
+                        <option value="student">
+                            Student
+                        </option>
+
+                        <option value="teacher">
+                            Teacher
+                        </option>
+
+                        <option value="admin">
+                            Admin
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="button"
+                    class="btn login-btn"
+                    onclick="loginUser()"
+                >
+                    Login
+                </button>
+
+
+                <!-- Message -->
+
+                <p id="loginMessage"></p>
+
+
+                <!-- Register Link -->
+
+                <p class="register-link">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Register here
+                    </a>
+
+                </p>
+
+
+                <!-- Back to Home -->
+
+                <p class="back-link">
+
+                    <a href="index.html">
+                        ← Back to Home
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

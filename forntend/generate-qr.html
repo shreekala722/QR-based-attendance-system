@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generate QR - QR Attendance System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+                <a href="teacher-dashboard.html">Dashboard</a>
+                <a href="generate-qr.html">Generate QR</a>
+                <a href="attendance.html">Attendance</a>
+                <a href="#" onclick="logoutUser()">Logout</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="qr-section">
+
+            <div class="qr-container">
+
+                <!-- Page Heading -->
+                <h1>Generate QR Code</h1>
+
+                <p class="qr-description">
+                    Create a QR code for your class attendance session.
+                </p>
+
+
+                <!-- Subject Selection -->
+                <div class="form-group">
+
+                    <label for="subject">
+                        Select Subject
+                    </label>
+
+                    
+                </div>
+                
+                <select id="subject">
+    <option value="">Loading subjects...</option>
+</select>
+
+
+                <!-- Semester -->
+                <div class="form-group">
+
+                    <label for="semester">
+                        Select Semester
+                    </label>
+
+                    <select id="semester" name="semester">
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="1">
+                            1st Semester
+                        </option>
+
+                        <option value="2">
+                            2nd Semester
+                        </option>
+
+                        <option value="3">
+                            3rd Semester
+                        </option>
+
+                        <option value="4">
+                            4th Semester
+                        </option>
+
+                        <option value="5">
+                            5th Semester
+                        </option>
+
+                        <option value="6">
+                            6th Semester
+                        </option>
+
+                        <option value="7">
+                            7th Semester
+                        </option>
+
+                        <option value="8">
+                            8th Semester
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Section -->
+                <div class="form-group">
+
+                    <label for="section">
+                        Select Section
+                    </label>
+
+                    <select id="section" name="section">
+
+                        <option value="">
+                            Select Section
+                        </option>
+
+                        <option value="A">
+                            Section A
+                        </option>
+
+                        <option value="B">
+                            Section B
+                        </option>
+
+                        <option value="C">
+                            Section C
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Session Duration -->
+                <div class="form-group">
+
+                    <label for="duration">
+                        QR Code Validity
+                    </label>
+
+                    <select id="duration" name="duration">
+
+                        <option value="5">
+                            5 Minutes
+                        </option>
+
+                        <option value="10">
+                            10 Minutes
+                        </option>
+
+                        <option value="15">
+                            15 Minutes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Generate Button -->
+                <button
+                    type="button"
+                    class="btn generate-btn"
+                    onclick="generateQR()">
+
+                    Generate QR Code
+
+                </button>
+
+
+                <!-- Message -->
+                <p id="qrMessage"></p>
+
+
+                <!-- QR Display Area -->
+                <div
+                    id="qrDisplay"
+                    class="qr-display">
+
+                    <h2>Attendance QR Code</h2>
+
+                    <!-- QR Code will appear here -->
+                    <div id="qrcode"></div>
+
+                    <p id="sessionInfo">
+                        QR code will be displayed here.
+                    </p>
+
+                    <!-- Timer -->
+                    <div class="qr-timer">
+
+                        <p>
+                            Time Remaining:
+                        </p>
+
+                        <h2 id="timer">
+                            00:00
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Stop Session Button -->
+                <button
+                    type="button"
+                    class="btn stop-btn"
+                    onclick="stopSession()">
+
+                    Stop Attendance Session
+
+                </button>
+
+
+                <!-- Back to Dashboard -->
+                <p class="back-link">
+
+                    <a href="teacher-dashboard.html">
+                        ← Back to Dashboard
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+    
+    <!--QR Code Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/teacher.js"></script>
+
+</body>
+
+</html>

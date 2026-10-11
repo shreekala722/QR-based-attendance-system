@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard - QR Attendance System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+                <a href="teacher-dashboard.html">Dashboard</a>
+                <a href="manage-subjects.html">Manage Subjects</a>
+                <a href="generate-qr.html">Generate QR</a>
+                <a href="teacher-attendance.html">View Attendance</a>
+                <a href="#" onclick="logoutUser()">Logout</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Dashboard -->
+    <main>
+
+        <section class="dashboard-section">
+
+            <div class="dashboard-container">
+
+                <!-- Welcome Section -->
+                <div class="welcome-section">
+
+                    <h1>Welcome, Teacher!</h1>
+
+                    <p>
+                        Manage attendance and generate QR codes
+                        for your classes.
+                    </p>
+
+                </div>
+
+
+                <!-- Teacher Information -->
+                <div class="student-info-card">
+
+                    <h2>My Profile</h2>
+
+                    <div class="student-info">
+
+                        <p>
+                            <strong>Name:</strong>
+                            <span id="teacherName">
+                                Teacher Name
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong>
+                            <span id="teacherEmail">
+                                teacher@example.com
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Department:</strong>
+                            <span id="teacherDepartment">
+                                Department
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard Actions -->
+                <div class="dashboard-actions">
+
+
+                    <!-- Generate QR Card -->
+                    <div class="dashboard-card">
+
+                        <h2>Generate QR Code</h2>
+
+                        <p>
+                            Create a QR code for your class
+                            attendance session.
+                        </p>
+
+                        <a href="generate-qr.html" class="btn">
+                            Generate QR
+                        </a>
+
+                        <a href="manage-subjects.html" class="btn">
+    Manage Subjects
+</a>
+
+                    </div>
+
+
+                    <!-- Attendance Card -->
+                    <div class="dashboard-card">
+
+                        <h2>View Attendance</h2>
+
+                        <p>
+                            View and manage attendance records
+                            of students.
+                        </p>
+
+                        <a href="teacher-attendance.html" class="btn">
+    View Attendance
+</a>
+                    </div>
+
+
+                </div>
+
+
+                <!-- Class Information -->
+                <div class="attendance-summary">
+
+                    <h2>Class Summary</h2>
+
+                    <div class="summary-container">
+
+
+                        <!-- Total Students -->
+                        <div class="summary-card">
+
+                            <h3>Total Students</h3>
+
+                            <p id="totalStudents">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <!-- Total Subjects -->
+                        <div class="summary-card">
+
+                            <h3>Total Subjects</h3>
+
+                            <p id="totalSubjects">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <!-- Total Sessions -->
+                        <div class="summary-card">
+
+                            <h3>Attendance Sessions</h3>
+
+                            <p id="totalSessions">
+                                0
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Instructions -->
+                <div class="instructions">
+
+                    <h2>How to Take Attendance</h2>
+
+                    <ol>
+
+                        <li>
+                            Login to your teacher account.
+                        </li>
+
+                        <li>
+                            Go to the Generate QR page.
+                        </li>
+
+                        <li>
+                            Select the subject and class.
+                        </li>
+
+                        <li>
+                            Start the attendance session.
+                        </li>
+
+                        <li>
+                            Display the generated QR code to students.
+                        </li>
+
+                        <li>
+                            Students scan the QR code using their devices.
+                        </li>
+
+                        <li>
+                            Attendance is automatically recorded.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/teacher.js"></script>
+
+</body>
+
+</html>

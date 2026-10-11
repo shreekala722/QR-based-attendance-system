@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - QR Attendance System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="register.html">Register</a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Registration Section -->
+
+    <main>
+
+        <section class="register-section">
+
+            <div class="register-container">
+
+                <h1>Create Account</h1>
+
+                <p class="register-description">
+                    Register to use the QR Attendance System
+                </p>
+
+
+                <!-- Account Type -->
+
+                <div class="form-group">
+
+                    <label for="userType">
+                        Register As
+                    </label>
+
+                    <select id="userType" name="userType">
+
+                        <option value="student">
+                            Student
+                        </option>
+
+                        <option value="teacher">
+                            Teacher
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- USN -->
+
+                <div class="form-group">
+ 
+                    <div id="usnField">
+    <label for="usn">USN</label>
+    <input type="text" id="usn" placeholder="Enter your USN">
+</div>
+                    
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Department -->
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select id="department" name="department">
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="ISE">
+                            Information Science and Engineering
+                        </option>
+
+                        <option value="CSE">
+                            Computer Science and Engineering
+                        </option>
+
+                        <option value="ECE">
+                            Electronics and Communication Engineering
+                        </option>
+
+                        <option value="EEE">
+                            Electrical and Electronics Engineering
+                        </option>
+
+                        <option value="ME">
+                            Mechanical Engineering
+                        </option>
+
+                        <option value="CIVIL">
+                            Civil Engineering
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Semester -->
+
+                <div class="form-group">
+
+                    <label for="semester">
+                        Semester
+                    </label>
+
+                    <select id="semester" name="semester">
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="1">1st Semester</option>
+                        <option value="2">2nd Semester</option>
+                        <option value="3">3rd Semester</option>
+                        <option value="4">4th Semester</option>
+                        <option value="5">5th Semester</option>
+                        <option value="6">6th Semester</option>
+                        <option value="7">7th Semester</option>
+                        <option value="8">8th Semester</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Section -->
+
+                <div class="form-group">
+
+                    <label for="section">
+                        Section
+                    </label>
+
+                    <select id="section" name="section">
+
+                        <option value="">
+                            Select Section
+                        </option>
+
+                        <option value="A">Section A</option>
+                        <option value="B">Section B</option>
+                        <option value="C">Section C</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Confirm Password -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Re-enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Register Button -->
+
+                <button
+                    type="button"
+                    class="btn register-btn"
+                    onclick="registerUser()"
+                >
+                    Register
+                </button>
+
+
+                <!-- Registration Message -->
+
+                <p id="registerMessage"></p>
+
+
+                <!-- Login Link -->
+
+                <p class="login-link">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+
+                <!-- Back to Home -->
+
+                <p class="back-link">
+
+                    <a href="index.html">
+                        ← Back to Home
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+    <script>
+    document.getElementById("userType").addEventListener("change", function () {
+        const usnField = document.getElementById("usnField");
+
+        if (this.value === "teacher") {
+            usnField.style.display = "none";
+        } else {
+            usnField.style.display = "block";
+        }
+    });
+</script>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

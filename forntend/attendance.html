@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance - QR Attendance System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                QR Attendance
+            </div>
+
+            <div class="nav-links">
+                <a href="student-dashboard.html">Dashboard</a>
+                <a href="scan-qr.html">Scan QR</a>
+                <a href="attendance.html">My Attendance</a>
+                <a href="#" onclick="logoutUser()">Logout</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="attendance-section">
+
+            <div class="attendance-container">
+
+                <h1>Attendance Records</h1>
+
+                <p class="attendance-description">
+                    View your attendance records and attendance percentage.
+                </p>
+
+
+                <!-- Student Information -->
+                <div class="student-info-card">
+
+                    <h2>Student Information</h2>
+
+                    <div class="student-info">
+
+                        <p>
+                            <strong>Name:</strong>
+                            <span id="attendanceStudentName">
+                                Loading...
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>USN:</strong>
+                            <span id="attendanceStudentUSN">
+                                Loading...
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Department:</strong>
+                            <span id="attendanceStudentDepartment">
+                                Loading...
+                            </span>
+                        </p>
+
+                        <p>
+                            <strong>Semester:</strong>
+                            <span id="attendanceStudentSemester">
+                                Loading...
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance Summary -->
+                <div class="attendance-summary">
+
+                    <h2>Attendance Summary</h2>
+
+                    <div class="summary-container">
+
+                        <div class="summary-card">
+
+                            <h3>Total Classes</h3>
+
+                            <p id="totalClasses">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <div class="summary-card">
+
+                            <h3>Classes Attended</h3>
+
+                            <p id="classesAttended">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <div class="summary-card">
+
+                            <h3>Classes Absent</h3>
+
+                            <p id="classesAbsent">
+                                0
+                            </p>
+
+                        </div>
+
+
+                        <div class="summary-card">
+
+                            <h3>Attendance Percentage</h3>
+
+                            <p id="attendancePercentage">
+                                0%
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance Table -->
+                <div class="attendance-table-container">
+
+                    <h2>Attendance Details</h2>
+
+                    <table class="attendance-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Sl. No.</th>
+
+                                <th>Date</th>
+
+                                <th>Subject</th>
+
+                                <th>Session</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="attendanceTableBody">
+
+                            <tr>
+
+                                <td colspan="5">
+                                    Loading attendance records...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- Attendance Percentage Information -->
+                <div class="percentage-info">
+
+                    <h2>Attendance Percentage</h2>
+
+                    <p>
+                        Attendance Percentage =
+                        Classes Attended ÷ Total Classes × 100
+                    </p>
+
+                    <p>
+                        Your current attendance percentage is:
+
+                        <strong id="percentageDisplay">
+                            0%
+                        </strong>
+                    </p>
+
+                </div>
+
+
+                <!-- Back to Dashboard -->
+                <p class="back-link">
+
+                    <a href="student-dashboard.html">
+                        ← Back to Dashboard
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 QR Attendance System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/attendance.js"></script>
+
+</body>
+
+</html>
