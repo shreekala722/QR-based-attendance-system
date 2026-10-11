@@ -30,7 +30,7 @@ async function loadAttendancePage() {
         // =========================================
 
         const studentResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}`
         );
 
         const studentData = await studentResponse.json();
@@ -61,7 +61,7 @@ async function loadAttendancePage() {
         // =========================================
 
         const summaryResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance-summary`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance-summary`
         );
 
         const summaryData = await summaryResponse.json();
@@ -92,7 +92,7 @@ async function loadAttendancePage() {
         // =========================================
 
         const attendanceResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance`
         );
 
         const attendanceData = await attendanceResponse.json();

@@ -20,7 +20,7 @@ async function loadTeacherSessions() {
         console.log("Loading teacher sessions...");
 
         const response = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/sessions`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/sessions`
         );
 
         console.log("Response status:", response.status);
@@ -129,7 +129,7 @@ async function loadSessionAttendance() {
         `;
 
         const sessionResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/${sessionId}`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/${sessionId}`
         );
 
         const sessionData =
@@ -168,7 +168,7 @@ async function loadSessionAttendance() {
 
 
         const attendanceResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/attendance/session/${sessionId}`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/attendance/session/${sessionId}`
         );
 
         const attendanceData =

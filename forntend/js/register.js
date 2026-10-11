@@ -53,7 +53,7 @@ async function registerUser() {
 
     try {
         const response = await fetch(
-            "http://qr-based-attendance-system-1-qi8b.onrender.com/api/auth/register",
+            "https://qr-based-attendance-system-1-qi8b.onrender.com/api/auth/register",
             {
                 method: "POST",
                 headers: {

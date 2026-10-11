@@ -40,7 +40,7 @@ async function loadTeacherDashboard() {
 
         // Get teacher profile
         const profileResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}`
         );
 
         const profileData = await profileResponse.json();
@@ -86,7 +86,7 @@ async function loadTeacherDashboard() {
         // Get teacher summary
 
         const summaryResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/summary`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/summary`
         );
 
         const summaryData =
@@ -175,7 +175,7 @@ async function loadTeacherSubjects() {
     try {
 
         const response = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/subjects`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/teachers/${teacherId}/subjects`
         );
 
         const data =
@@ -399,7 +399,7 @@ async function generateQR() {
 
 
         const response = await fetch(
-            "http://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/create",
+            "https://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/create",
             {
                 method: "POST",
 
@@ -712,7 +712,7 @@ async function stopSession() {
 
         const response =
             await fetch(
-                `http://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/${currentSessionId}/stop`,
+                `https://qr-based-attendance-system-1-qi8b.onrender.com/api/sessions/${currentSessionId}/stop`,
                 {
                     method: "PUT"
                 }

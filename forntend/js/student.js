@@ -27,7 +27,7 @@ async function loadStudentDashboard() {
 
         // Get student details
         const response = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}`
         );
 
         const data = await response.json();
@@ -61,7 +61,7 @@ async function loadStudentDashboard() {
         // =========================================
 
         const summaryResponse = await fetch(
-            `http://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance-summary`
+            `https://qr-based-attendance-system-1-qi8b.onrender.com/api/students/${studentId}/attendance-summary`
         );
 
         const summaryData =

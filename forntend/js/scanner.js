@@ -150,7 +150,7 @@ async function handleQRCode(decodedText) {
 
         // Send attendance request to backend
         const response = await fetch(
-            "http://qr-based-attendance-system-1-qi8b.onrender.com/api/attendance/mark",
+            "https://qr-based-attendance-system-1-qi8b.onrender.com/api/attendance/mark",
             {
                 method: "POST",
 
