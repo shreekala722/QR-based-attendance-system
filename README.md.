@@ -1,0 +1,59 @@
+QR-Based Attendance System
+
+About the Project
+The QR-Based Attendance System is a web application that helps teachers record and manage student attendance using QR codes. Students can scan a QR code to mark their attendance, making the process easier and faster.
+
+Features
+- Student, teacher, and admin login
+- Student and teacher registration
+- QR code generation for attendance sessions
+- QR code scanning to mark attendance
+- Student attendance history
+- Teacher attendance management
+- Subject management
+- Database storage using MongoDB
+
+Technologies Used
+
+Frontend
+- HTML
+- CSS
+- JavaScript
+
+Backend
+- Node.js
+- Express.js
+
+Database
+- MongoDB Atlas
+
+Other Tools
+- Git and GitHub
+- Render for deployment
+- QR code generation and scanning libraries
+
+Live Demo
+Frontend: https://qr-based-attendance-system-2-0vv6.onrender.com
+
+Backend: https://qr-based-attendance-system-1-qi8b.onrender.com
+
+How It Works
+1. The teacher logs in and generates a QR code for an attendance session.
+2. The student logs in and opens the QR scanner.
+3. The student scans the teacher's QR code.
+4. The system records the attendance in the database.
+5. Teachers and students can view attendance records through their dashboards.
+
+Project Purpose
+The purpose of this project is to simplify attendance management, reduce manual work, and provide a convenient way to maintain attendance records.
+
+Future Enhancements
+- Attendance reports and downloadable summaries
+- Improved security and access control
+- Better dashboard analytics
+- Mobile-friendly interface
+
+Developed By
+Shreekala Nayak
+
+Information Science Engineering Student
